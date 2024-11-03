@@ -12,7 +12,7 @@ jobs:
       - name: Sync S3 Bucket
         uses: jakejarvis/s3-sync-action@v0.5.1
         with:
-            args: --follow-symlinks --delete
+            args: --follow-symlinks  # Removed --delete to prevent file deletion
 
         env:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
